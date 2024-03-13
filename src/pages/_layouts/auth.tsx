@@ -4,8 +4,8 @@ import { Outlet } from 'react-router-dom'
 export function AuthLayout() {
   return (
     <div className="grid min-h-screen grid-cols-2 antialiased">
-      <div className="h-full border-r border-foreground/5 bg-muted p-10 text:muted-foreground flex flex-col justify-between">
-        <div className="flex items-center gap-5 text-gl text-foreground">
+      <div className="text:muted-foreground flex h-full flex-col justify-between border-r border-foreground/5 bg-muted p-10">
+        <div className="text-gl flex items-center gap-5 text-foreground">
           <Pizza className="h-5 w-5" />
           <span className="font-medium">pizza.shop</span>
         </div>
@@ -15,7 +15,7 @@ export function AuthLayout() {
         </footer>
       </div>
 
-      <div className="flex flex-col items-center justify-center relative">
+      <div className="relative flex flex-col items-center justify-center">
         <Outlet />
       </div>
     </div>

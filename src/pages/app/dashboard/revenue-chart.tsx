@@ -14,7 +14,7 @@ import {
 } from 'recharts'
 import colors from 'tailwindcss/colors'
 
-import { getDailyReveneuInPeriod } from '@/api/get-daily-revenue-in-period'
+import { getDailyRevenueInPeriod } from '@/api/get-daily-revenue-in-period'
 import {
   Card,
   CardContent,
@@ -34,7 +34,7 @@ export function RevenueChart() {
   const { data: dailyRevenueInPeriod } = useQuery({
     queryKey: ['metrics', 'daily-revenue-in-period', dateRange],
     queryFn: () =>
-      getDailyReveneuInPeriod({
+      getDailyRevenueInPeriod({
         from: dateRange?.from,
         to: dateRange?.to,
       }),

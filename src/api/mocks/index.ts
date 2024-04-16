@@ -18,7 +18,7 @@ import { getPopularProductsMock } from './get-popular-products-mock'
 import { getProfileMock } from './get-profile-mock'
 import { registerRestaurantMock } from './resister-restaurant-mock.mock'
 import { signInMock } from './sign-in.mock'
-import { UpdateProfileMock } from './update-profile-mock'
+import { updateProfileMock } from './update-profile-mock'
 
 export const worker = setupWorker(
   signInMock,
@@ -31,7 +31,7 @@ export const worker = setupWorker(
   getPopularProductsMock,
   getProfileMock,
   getManagedRestaurantMock,
-  UpdateProfileMock,
+  updateProfileMock,
   getOrdersMock,
   getOrderDetailsMock,
   approveOrderMock,

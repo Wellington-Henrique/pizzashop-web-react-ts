@@ -24,11 +24,10 @@ export function Orders() {
   const customerName = searchParams.get('customerName')
   const status = searchParams.get('status')
 
-  const pageIndex =
-    z.coerce
-      .number()
-      .transform((page) => page - 1)
-      .parse(searchParams.get('page')) ?? '1'
+  const pageIndex = z.coerce
+    .number()
+    .transform((page) => page - 1)
+    .parse(searchParams.get('page') ?? '1')
 
   const { data: result, isLoading: IsLoadingOrders } = useQuery({
     queryKey: ['orders', pageIndex, orderId, customerName, status],
